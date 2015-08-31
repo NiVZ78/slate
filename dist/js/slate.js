@@ -211,7 +211,7 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
         $item.find('.color-box.selectable').on('click', function(ev) {
           ev.preventDefault();
 
-          var value = $(this).data('value');
+          var value = $(this).data('value').change();
           $color.val(value);
           $valueDisplay.css('background-color', value.replace(/^0x/, '#'));
           $item.find('.color-box-wrap').removeClass('show');
